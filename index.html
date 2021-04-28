@@ -6,17 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google</title>
     <style>
-
         .search_form {
             margin: 0;
             position: absolute;
-            top: 27%;
+            top: 33%;
             left: 50%;
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
             text-align: center;
         }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline;
+        }
+        li {
+            display: inline;
+        }
 
+        #right {
+            float: right;
+        }
+        a {
+            padding-left: 15px;
+            color: black;
+            font-size: 13px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .sign_in {
+            color: white;
+            border: 1px solid #4285f4;
+            font-weight: bold;
+            background: -webkit-linear-gradient(top, #4387fd, #4683ea);
+            line-height: 28px;
+            padding: 0 12px;
+            border-radius: 2px;
+        }
+        #bot_left {
+            position: absolute;
+            top: 97%;
+        }
+        #bot_right {
+            position: absolute;
+            top: 97%;
+            left: 90%;
+        }
+        .footer {
+            background-color: black;
+        }
+        #search {
+            height: 44px;
+            width: 584px;
+            line-height: 44px;
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            font: 16px arial,sans-serif;
+            padding-left: 45px;
+            padding-right: 45px;
+            box-sizing: border-box;
+            
+            
+        }
+        #search:hover, #search:focus {
+            outline: none;
+            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+        }
+        #voice {
+            position: absolute;
+            top: 137px;
+            left: 550px;
+            height: 20px;
+            vertical-align: middle;
+        }
+        #i-search {
+            position: absolute;
+            top: 138px;
+            left: 15px;
+            opacity: 0.45;
+            width: 20px;
+        }
+        .but {
+            margin-top: 30px;
+            background-color: #f5f5f5;
+            border:none;
+            color:#707070;
+            font-size:15px;
+            padding: 10px 20px;
+            margin:5px;
+            border-radius:4px;
+            outline:none;
+        }
+        #logo {
+            margin-bottom: 30px;
+        }
+        .but:hover {
+            border: 1px solid #c8c8c8;
+            padding: 9px 19px;
+            color:#808080;
+        }
+        .but:focus {
+            border:1px solid #4885ed;
+            padding: 9px 19px;
+        }
     </style>
 </head>
 <body>
@@ -24,25 +119,38 @@
     <div class="search_form">
         <img id="logo" src="google-logo.png" alt="Google logo">
         <form>
-            <input type="text"><br>
-            <input id="Search" type="submit" value="Search"> 
-            <input type="submit" value="I'm Feeling Lucky">
+            <input id="search" type="text" placeholder=" ">
+            <img id="voice" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png">
+            <img id="i-search" src="search-black.png"><br>
+            <button class="but" type="button">Google Search</button>
+            <button class="but" type="button">I'm Feeling Lucky</button>
+
         </form>
     </div>
     <nav>
-        <ul>
+        <ul id="left">
             <li><a href="">About</a></li>
             <li><a href="">Store</a></li>
+        </ul>
+        <ul id="right">
             <li><a href="">Gmail</a></li>
             <li><a href="">Images</a></li>
-            <li><a href=""><img src="waffle-icon.jpg" width="30px"></a></li>
-            <li><a href=""><button>Sign in</button></a></li>
+            <li><a href=""><img src="waffle-icon.jpg" width="15px"></a></li>
+            <li><a href=""><button class="sign_in">Sign in</button></a></li>
         </ul>
     </nav>
     
 </body>
-<footer>
-    
-    <!--Advertising, Business, How Search works | Privacy, Terms, Settings-->
-</footer>
+<div class="footer">
+    <ul id="bot_left">
+        <li><a href="">Advertising</a></li>
+        <li><a href="">Business</a></li>
+        <li><a href="">How Search works</a></li>
+    </ul>
+    <ul id="bot_right">
+        <li><a href="">Privacy</a></li>
+        <li><a href="">Terms</a></li>
+        <li><a href="">Settings</a></li>
+    </ul>
+</div>
 </html>
